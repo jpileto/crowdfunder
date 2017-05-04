@@ -7,7 +7,7 @@ class PledgesController < ApplicationController
     @pledge.reward = Reward.find(params[:reward_id])
 
     if @pledge.save
-      redirect_to project_url(@pledge.project), notice: "You have successfully backed #{@pledge.project.title}!"
+      redirect_to project_url(@pledge.project), notice: "You have successfully backed  #{@pledge.project.title}!"
     else
       @project = @pledge.project
       render 'projects/show'
